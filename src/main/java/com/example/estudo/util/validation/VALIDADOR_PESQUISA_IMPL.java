@@ -1,7 +1,7 @@
 package com.example.estudo.util.validation;
 
-import com.example.estudo.model.comNumero.Pesquisa;
-import com.example.estudo.util.ValidarClienteNumero;
+import com.example.estudo.model.comAnotacao.Pesquisa;
+import com.example.estudo.util.ValidarClienteAnotacao;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
@@ -11,6 +11,6 @@ public class VALIDADOR_PESQUISA_IMPL implements ConstraintValidator<VALIDADOR_PE
 
     @Override
     public boolean isValid(List<Pesquisa> pesquisas, ConstraintValidatorContext constraintValidatorContext) {
-        return ValidarClienteNumero.validarPesquisa(pesquisas);
+        return ValidarClienteAnotacao.validarPesquisa(pesquisas);
     }
 }

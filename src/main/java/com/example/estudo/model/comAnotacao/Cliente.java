@@ -1,4 +1,6 @@
-package com.example.estudo.model.comNumero;;
+package com.example.estudo.model.comAnotacao;
+
+import com.example.estudo.util.validation.VALIDADOR_PESQUISA;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +9,7 @@ public class Cliente {
 
     private String Nome;
 
+    @VALIDADOR_PESQUISA(message = "Existe Campos com tipo 2 onde o compos resposta é obrigatório")
     private List<Pesquisa> pesquisas = new ArrayList<>();
 
     public String getNome() {
