@@ -4,7 +4,7 @@ public class Pesquisa {
 
     private String informacao;
 
-    private String sim;
+    private String pergunta;
 
     private String resposta;
 
@@ -16,12 +16,12 @@ public class Pesquisa {
         this.informacao = informacao;
     }
 
-    public String getSim() {
-        return sim;
+    public String getPergunta() {
+        return pergunta;
     }
 
-    public void setSim(String sim) {
-        this.sim = sim;
+    public void setPergunta(String pergunta) {
+        this.pergunta = pergunta;
     }
 
     public String getResposta() {

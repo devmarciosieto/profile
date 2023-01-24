@@ -13,14 +13,14 @@ public class ValidarClienteEnum {
 
 
         return pesquisas.stream().filter(pesquisa ->
-                        pesquisa.getTipo().equals(Tipo.SIM) && (pesquisa.getResposta() == null || Objects.equals(pesquisa.getResposta().trim(), "")))
+                        pesquisa.getTipo().equals(Tipo.NAO) && (pesquisa.getResposta() == null || Objects.equals(pesquisa.getResposta().trim(), "")))
                 .collect(Collectors.toList()).isEmpty();
 
     }
 
     public static List<Pesquisa> validarPesquisaComCamposDoError(List<Pesquisa> pesquisas) {
         return pesquisas.stream().filter(pesquisa ->
-                        pesquisa.getTipo().equals(Tipo.SIM) && (pesquisa.getResposta() == null || Objects.equals(pesquisa.getResposta().trim(), "")))
+                        pesquisa.getTipo().equals(Tipo.NAO) && (pesquisa.getResposta() == null || Objects.equals(pesquisa.getResposta().trim(), "")))
                 .collect(Collectors.toList());
     }
 
