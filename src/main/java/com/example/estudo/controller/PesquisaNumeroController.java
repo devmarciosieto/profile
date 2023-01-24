@@ -4,6 +4,7 @@ package com.example.estudo.controller;
 import com.example.estudo.model.comNumero.Cliente;
 import com.example.estudo.model.comNumero.Pesquisa;
 import com.example.estudo.util.ValidarClienteNumero;
+import jakarta.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,7 @@ import java.util.List;
 public class PesquisaNumeroController {
 
     @PostMapping
-    public String post(@RequestBody Cliente cliente) {
+    public String post(@RequestBody @Valid Cliente cliente) {
 
         if (ValidarClienteNumero.validarPesquisa(cliente.getPesquisas())) {
             System.out.println("tudo certo");

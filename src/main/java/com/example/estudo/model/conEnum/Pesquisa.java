@@ -1,7 +1,9 @@
 package com.example.estudo.model.conEnum;
 
 import com.example.estudo.model.Tipo;
+import com.example.estudo.util.validation.VALIDADOR_PESQUISA;
 
+@VALIDADOR_PESQUISA
 public class Pesquisa {
 
     private String informacao;
