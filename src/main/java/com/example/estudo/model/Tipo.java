@@ -1,6 +1,6 @@
 package com.example.estudo.model;
 
-public enum Reposta {
+public enum Tipo {
     SIM,
     NAO;
 }

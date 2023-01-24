@@ -1,4 +1,4 @@
-package com.example.estudo.model;
+package com.example.estudo.model.comBoolean;
 
 public class Pesquisa {
 

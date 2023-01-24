@@ -1,4 +1,4 @@
-package com.example.estudo.model;
+package com.example.estudo.model.comString;
 
 import java.util.ArrayList;
 import java.util.List;
