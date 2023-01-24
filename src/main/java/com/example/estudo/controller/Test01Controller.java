@@ -22,7 +22,6 @@ public class Test01Controller {
 
         System.out.println("Este é o meu ambiente: " + ambiente);
 
-
         if (ambiente.equals("develop")) {
             System.out.println("Estou em desenvolvimento");
         }

@@ -2,7 +2,6 @@ package com.example.estudo.controller;
 
 import com.example.estudo.model.comNumero.Cliente;
 import com.example.estudo.model.comNumero.Pesquisa;
-import com.example.estudo.util.ValidarClienteNumero;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.estudo.util.ValidarClienteNumero.*;
+
 @RestController
 @RequestMapping("/numero/pesquisa")
 public class PesquisaNumeroController {
@@ -18,7 +19,7 @@ public class PesquisaNumeroController {
     @PostMapping
     public String post(@RequestBody Cliente cliente) {
 
-        if (ValidarClienteNumero.validarPesquisa(cliente.getPesquisas())) {
+        if (validarPesquisa(cliente.getPesquisas())) {
             System.out.println("tudo certo");
             return "tudo certo";
         } else {
@@ -31,7 +32,7 @@ public class PesquisaNumeroController {
     @PostMapping("/campos")
     public List<String> postComCampos(@RequestBody Cliente cliente) {
 
-        List<Pesquisa> pesquisas = ValidarClienteNumero.validarPesquisaComCamposDoError(cliente.getPesquisas());
+        List<Pesquisa> pesquisas = validarPesquisaComCamposDoError(cliente.getPesquisas());
 
         List<String> campos = new ArrayList<>();
 

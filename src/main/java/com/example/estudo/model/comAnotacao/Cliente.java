@@ -9,7 +9,7 @@ public class Cliente {
 
     private String Nome;
 
-    @VALIDADOR_PESQUISA(message = "Existe Campos com tipo 2 onde o compos resposta é obrigatório")
+    @VALIDADOR_PESQUISA
     private List<Pesquisa> pesquisas = new ArrayList<>();
 
     public String getNome() {
